@@ -3,7 +3,7 @@
 "HamClock is a kiosk-style application that provides real time space weather, radio propagation models, operating events and other information particularly useful to the radio amateur." (Source: Hamclock Website)
 
 Goal of this repository is to build and run Hamclock inside Docker for ease of use.
-Hamclock will be exposed as 
+Hamclock will be exposed as a webservice on [http://localhost:8081](http://localhost:8081)
 
 This repository does NOT contain any Hamclock source files as it's neither neccessary nor is the licensing clear. The files will be downloaded and compiled during `docker build`.
 
