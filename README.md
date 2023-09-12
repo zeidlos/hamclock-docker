@@ -14,6 +14,7 @@ More information and documentation on the Hamclock Website:
 ### Prerequisites
 I assume that you're on some form of Linux/Unix system.
 Docker and (optionally) Docker Compose are installed.
+This may or may not work inside Windows WSL2 environment. I've not tested it and most likley wont. Please give feedback if you tested this. :)
 
 ### Install/Usage
 1. Check out this repository
