@@ -1,6 +1,6 @@
 # Hamclock Docker
 
-"HamClock is a kiosk-style application that provides real time space weather, radio propagation models, operating events and other information particularly useful to the radio amateur." (Source: [https://www.clearskyinstitute.com/ham/HamClock/](Hamclock Website))
+"HamClock is a kiosk-style application that provides real time space weather, radio propagation models, operating events and other information particularly useful to the radio amateur." (Source: Hamclock Website)
 
 Goal of this repository is to build and run Hamclock inside Docker for ease of use.
 
