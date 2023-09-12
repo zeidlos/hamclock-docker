@@ -39,7 +39,8 @@ At this point I assume you have deeper knowledge on how to use Docker and potent
 If you're interested in advancing this, please use the usual workflow of forking and creating a pullrequest.
 
 ## Future Plans
-Customize Hamclock configuration via config file and writing the eeprom file as detailed on the website>user contrib>5.
+* Customize Hamclock configuration via config file and writing the eeprom file as detailed on the website>user contrib>5.
+* Customize target resolution in build process.
 
 Thanks to WB0OEW for his great ham radio tool!
 73
