@@ -16,6 +16,8 @@ I assume that you're on some form of Linux/Unix system.
 Docker and (optionally) Docker Compose are installed.
 This may or may not work inside Windows WSL2 environment. I've not tested it and most likley wont. Please give feedback if you tested this. :)
 
+As of now, i don't have a raspbery Pi. WB0OEW gave me the feedback, that the `docker-compose` variant doesn't work on his Pi4, we're going to work that out.
+
 ### Install/Usage
 #### Docker (Hard mode)
 1. Check out this repository
@@ -39,8 +41,10 @@ At this point I assume you have deeper knowledge on how to use Docker and potent
 If you're interested in advancing this, please use the usual workflow of forking and creating a pullrequest.
 
 ## Future Plans
+* Make it work on Raspbian as well.
 * Customize Hamclock configuration via config file and writing the eeprom file as detailed on the website>user contrib>5.
 * Customize target resolution in build process.
 
 Thanks to WB0OEW for his great ham radio tool!
 73
+
