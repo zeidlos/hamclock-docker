@@ -3,7 +3,7 @@
 "HamClock is a kiosk-style application that provides real time space weather, radio propagation models, operating events and other information particularly useful to the radio amateur." (Source: Hamclock Website)
 
 Goal of this repository is to build and run Hamclock inside Docker for ease of use.
-Hamclock will be exposed as a webservice on [http://localhost:8081](http://localhost:8081)
+Hamclock will be exposed as a webservice on [http://localhost:8081/live.html](http://localhost:8081/live.html)
 
 This repository does NOT contain any Hamclock source files as it's neither neccessary nor is the licensing clear. The files will be downloaded and compiled during `docker build`.
 
@@ -23,14 +23,14 @@ As of now, i don't have a raspbery Pi. WB0OEW gave me the feedback, that the `do
 1. Check out this repository
 2. Inside the repository, run `docker build -t hamclock .`
 3. Run Hamclock using `docker run --rm --name hamclock -d -it -p 8081:8081 -p 8080:8080 hamclock`
-4. Quickly open [http://localhost:8081](http://localhost:8081) and set up hamclock
+4. Quickly open [http://localhost:8081/live.html](http://localhost:8081/live.html) and set up hamclock
 5. Enjoy WB0OEW's hard work
 6. To stop Hamclock, run `docker stop hamclock`
 
 #### Docker Compose (Easy mode)
 1. Check out this repository
 2. Inside the repository, run `docker-compose up -d`
-3. Quickly open [http://localhost:8081](http://localhost:8081) and set up hamclock
+3. Quickly open [http://localhost:8081/live.html](http://localhost:8081/live.html) and set up hamclock
 4. Enjoy WB0OEW's hard work
 5. To stop Hamclock, simply run `docker-compose down`
 
