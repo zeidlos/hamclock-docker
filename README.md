@@ -22,7 +22,7 @@ As of now, i don't have a raspbery Pi. WB0OEW gave me the feedback, that the `do
 #### Docker (Hard mode)
 1. Check out this repository
 2. Inside the repository, run `docker build -t hamclock .`
-3. Run Hamclock using `docker run --rm --name -d -it -p 8081:8081 -p 8080:8080 hamclock`
+3. Run Hamclock using `docker run --rm --name hamclock -d -it -p 8081:8081 -p 8080:8080 hamclock`
 4. Quickly open [http://localhost:8081](http://localhost:8081) and set up hamclock
 5. Enjoy WB0OEW's hard work
 6. To stop Hamclock, run `docker stop hamclock`
