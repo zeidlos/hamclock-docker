@@ -37,6 +37,16 @@ As of now, i don't have a raspbery Pi. WB0OEW gave me the feedback, that the `do
 ### Advanced (Server/Cloud) usage
 At this point I assume you have deeper knowledge on how to use Docker and potentially Kubernetes as well as reverse proxies, so I won't bother to explain the myriad of options on how to get it to run on remote infrastructure.
 
+## Compatibility
+(x) Intel based MacOS
+(x) Silicon based MacOS
+(x) Intel based Linux (Debian)
+(?) Rasbian
+(?) Windows WSL2
+
+## Issues and problems
+Please let me know if you encounter any issues or problems. Ideally you include your operating system, architecture (Intel, AMD, Atom, Apple Silicon M1/2) as well as the software versions of docker and docker compose in your ticket. I'll gladly assist in any issues. You can also email me, using the email address on my QRZ-page (DO7JZ).
+
 ## Contributing
 If you're interested in advancing this, please use the usual workflow of forking and creating a pullrequest.
 
