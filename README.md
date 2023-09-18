@@ -14,7 +14,7 @@ More information and documentation on the Hamclock Website:
 ### Prerequisites
 I assume that you're on some form of Linux/Unix system.
 Docker and (optionally) Docker Compose are installed.
-This may or may not work inside Windows WSL2 environment. I've not tested it and most likley wont. Please give feedback if you tested this. :)
+This may or may not work inside Windows WSL2 environment. I've not tested it and most likley will. Please give feedback if you tested this. :)
 
 As of now, i don't have a raspbery Pi. WB0OEW gave me the feedback, that the `docker-compose` variant doesn't work on his Pi4, we're going to work that out.
 
