@@ -7,10 +7,3 @@ services:
       - "8080:8080"
     env_file: 
       - config.yaml
-#     volumes:
-#       - config:/root/
-#       - hamclock:/hamclock/
-
-# volumes:
-#   config:
-#   hamclock:
