@@ -20,17 +20,17 @@ As of now, i don't have a raspbery Pi. WB0OEW gave me the feedback, that the `do
 
 ### Install/Usage
 #### Docker (Hard mode)
-1. Check out this repository
-2. Inside the repository, run `docker build -t hamclock .`
-3. Run Hamclock using `docker run --rm --name -d -it -p 8081:8081 -p 8080:8080 hamclock`
-4. Quickly open [http://localhost:8081](http://localhost:8081) and set up hamclock
+1. Check out this repository and change into it
+2. Copy the `config_example.yaml` to `config.yaml` and edit to your liking
+3. Inside the repository, run `docker build -t hamclock .`
+4. Run Hamclock using `docker run --rm --name hamclock -d -it -p 8081:8081 -p 8080:8080  --env-file config.yaml hamclock`
 5. Enjoy WB0OEW's hard work
 6. To stop Hamclock, run `docker stop hamclock`
 
 #### Docker Compose (Easy mode)
-1. Check out this repository
-2. Inside the repository, run `docker-compose up -d`
-3. Quickly open [http://localhost:8081](http://localhost:8081) and set up hamclock
+1. Check out this repository and change into it
+2. Copy the `config_example.yaml` to `config.yaml` and edit to your liking
+3. Inside the repository, run `docker-compose up -d`
 4. Enjoy WB0OEW's hard work
 5. To stop Hamclock, simply run `docker-compose down`
 
@@ -40,9 +40,15 @@ At this point I assume you have deeper knowledge on how to use Docker and potent
 ## Contributing
 If you're interested in advancing this, please use the usual workflow of forking and creating a pullrequest.
 
+
+## Changelog
+### v0.01
+Customize Hamclock configuration via config file
+### v0.00
+Initial release.
+
 ## Future Plans
 * Make it work on Raspbian as well.
-* Customize Hamclock configuration via config file and writing the eeprom file as detailed on the website>user contrib>5.
 * Customize target resolution in build process.
 
 Thanks to WB0OEW for his great ham radio tool!
