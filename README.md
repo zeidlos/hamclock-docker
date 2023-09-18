@@ -24,14 +24,14 @@ As of now, i don't have a raspbery Pi. WB0OEW gave me the feedback, that the `do
 2. Copy the `config_example.yaml` to `config.yaml` and edit to your liking
 3. Inside the repository, run `docker build -t hamclock .`
 4. Run Hamclock using `docker run --rm --name hamclock -d -it -p 8081:8081 -p 8080:8080  --env-file config.yaml hamclock`
-5. Enjoy WB0OEW's hard work
+5. Enjoy WB0OEW's hard work on [http://localhost:8081/live.html](http://localhost:8081/live.html)
 6. To stop Hamclock, run `docker stop hamclock`
 
 #### Docker Compose (Easy mode)
 1. Check out this repository and change into it
 2. Copy the `config_example.yaml` to `config.yaml` and edit to your liking
 3. Inside the repository, run `docker-compose up -d`
-4. Enjoy WB0OEW's hard work
+4. Enjoy WB0OEW's hard work on [http://localhost:8081/live.html](http://localhost:8081/live.html)
 5. To stop Hamclock, simply run `docker-compose down`
 
 ### Advanced (Server/Cloud) usage
