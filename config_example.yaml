@@ -1,0 +1,15 @@
+# PLEASE COPY THIS FILE TO config.yaml
+CALLSIGN: "DO7JZ"
+LOCATOR: "JO53an" # Use 6-digit locator
+LAT: "54" # Positive numbers are north, negative south
+LONG: "10" # Positive numbers are east, negative west
+UTC_OFFSET: "+2" # UTC offset in hours. Negative number for negative offset
+VOACAP_MODE: "38" # CW=19 SSB=38 AM=49 WSPR=3 FT8=13 FT4=17
+VOACAP_POWER: "10" # Power in Watts
+CALLSIGN_BACKGROUND_COLOR: "80,80,80" # RGB Values 
+CALLSIGN_BACKGROUND_RAINBOW: "0" # Set to 1 if you want to have the rainbow. Overwrites color setting from above
+CALLSIGN_COLOR: "200,200,200" # RGB Values
+FLRIG_PORT: "12345" # Portnumber of FLRIG
+FLRIG_HOST: "localhost" # Hostname or IP of FLRIG
+USE_FLRIG: "0" # 1=Use FLRIG, 0=Don't use FLRIG
+USE_METRIC: "1" # 1=Use Metric System 0=Don't use it

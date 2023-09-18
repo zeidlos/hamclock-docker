@@ -1,11 +1,16 @@
+version: "3.7"
 services:
   web:
     build: .
     ports:
       - "8081:8081"
       - "8080:8080"
-    volumes:
-      - config:/root/
+    env_file: 
+      - config.yaml
+#     volumes:
+#       - config:/root/
+#       - hamclock:/hamclock/
 
-volumes:
-  config:
+# volumes:
+#   config:
+#   hamclock:
