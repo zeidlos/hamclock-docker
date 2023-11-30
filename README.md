@@ -21,18 +21,40 @@ As of now, i don't have a raspbery Pi. WB0OEW gave me the feedback, that the `do
 ### Install/Usage
 #### Docker (Hard mode)
 1. Check out this repository and change into it
-2. Copy the `config_example.yaml` to `config.yaml` and edit to your liking
+2. Copy the `config_example.env` to `config.env` and edit to your liking
 3. Inside the repository, run `docker build -t hamclock .`
-4. Run Hamclock using `docker run --rm --name hamclock -d -it -p 8081:8081 -p 8080:8080  --env-file config.yaml hamclock`
+4. Run Hamclock using `docker run --rm --name hamclock -d -it -p 8081:8081 -p 8080:8080  --env-file config.env hamclock`
 5. Enjoy WB0OEW's hard work on [http://localhost:8081/live.html](http://localhost:8081/live.html)
 6. To stop Hamclock, run `docker stop hamclock`
 
 #### Docker Compose (Easy mode)
 1. Check out this repository and change into it
-2. Copy the `config_example.yaml` to `config.yaml` and edit to your liking
+2. Copy the `config_example.env` to `config.env` and edit to your liking
 3. Inside the repository, run `docker-compose up -d`
 4. Enjoy WB0OEW's hard work on [http://localhost:8081/live.html](http://localhost:8081/live.html)
 5. To stop Hamclock, simply run `docker-compose down`
+
+#### Docker Compose Hybrid (Build Docker image then use it in Docker Compose)
+1. Clone this repo
+    ``` cmd
+    git clone https://github.com/zeidlos/hamclock-docker.git
+    ```
+2. Change directory into the repo
+    ``` cmd
+    cd hamclock-docker
+    ```
+3. Copy the `config_example.env` to `config.env` and edit to your liking
+4. Build the Docker image for the Dockerfile with this commad
+    ``` cmd
+    docker build -t hamclock:latest
+    ```
+5. Run the container with this command
+    ``` cmd
+    docker-compose -f docker-compose.hybrid.yml up -d
+    ```
+    ##### you can change the ports, docker network, and other things you may need by editing the docker-compose.hybrid.yml file #####
+    ##### Also note that if you change the port that the container is using you will need to change the address to access Hamclock 
+    ex: with the port changed to 9500 the address to access hamclock will be  http://localhost:9500/live.html
 
 ### Advanced (Server/Cloud) usage
 At this point I assume you have deeper knowledge on how to use Docker and potentially Kubernetes as well as reverse proxies, so I won't bother to explain the myriad of options on how to get it to run on remote infrastructure.
