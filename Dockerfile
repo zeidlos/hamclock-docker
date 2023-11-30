@@ -19,7 +19,7 @@ ENV USE_FLRIG="0"
 ENV USE_METRIC="1"
 
 USER root
-WORKDIR /hamclock
+WORKDIR /root/hamclock
 # Install prerequisites
 RUN apk add curl make g++ libx11-dev openssl unzip perl
 
@@ -28,23 +28,24 @@ RUN rm -fr ESPHamClock && \
     curl -O https://www.clearskyinstitute.com/ham/HamClock/ESPHamClock.zip && \
     unzip ESPHamClock.zip && \
     cd ESPHamClock && \
-    make -j 4 hamclock-web-1600x960 && \
+    make -j 4 hamclock-web-2400x1440 && \
     make install
 
 # Install Hamclock Contrib and move hceeprom to hamclock directory
-RUN cd /hamclock && \
+RUN cd /root/hamclock && \
     curl -O https://www.clearskyinstitute.com/ham/HamClock/hamclock-contrib.zip && \
-    unzip hamclock-contrib.zip && \
-    mv hamclock-contrib/hceeprom.pl ESPHamClock/
-WORKDIR /hamclock/ESPHamClock
+    unzip hamclock-contrib.zip
+RUN mv hamclock-contrib/hceeprom.pl /root/hamclock/ESPHamClock
+WORKDIR /root/hamclock/ESPHamClock
+RUN chmod +x hceeprom.pl
 
 # Run Hamclock for 15 seconds in order to create config file
 RUN /usr/local/bin/hamclock -t 20 & sleep 15; kill -INT %+
 
 # Copy runfile
-WORKDIR /hamclock
+WORKDIR /root/hamclock
 COPY run.sh .
 RUN chmod +x run.sh
 
-WORKDIR /hamclock/ESPHamClock
-CMD /hamclock/run.sh
+WORKDIR /root/hamclock/ESPHamClock
+CMD /root/hamclock/run.sh
