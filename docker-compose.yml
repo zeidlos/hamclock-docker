@@ -1,0 +1,19 @@
+version: "3"
+# add this below if you want to attach this container to an existing docker network
+#networks:
+  #yournetwork:
+    #external: true
+
+services:
+  web:
+    build: .
+    # change port in front of ':' to an open port to use to view hamclock ex: "9500:8081" DO NOT CHANGE THE PORT AFTER ':'
+    ports:
+      - "8081:8081"
+      - "8080:8080"
+    env_file: config.env
+    # add this below if you want to attach this to a specific network
+    #networks:
+      #- yournetwork
+    # this tells docker to restart the container unless you have specifically stopped it
+    restart: unless-stopped
