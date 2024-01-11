@@ -16,5 +16,3 @@ perl hceeprom.pl NV_FLRIGUSE $USE_FLRIG && \
 perl hceeprom.pl NV_METRIC_ON $USE_METRIC && \
 
 /usr/local/bin/hamclock -t 20
-# /usr/local/bin/hamclock -t 20 & \
-# curl localhost:8080 updateVersion
