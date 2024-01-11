@@ -72,7 +72,9 @@ Please let me know if you encounter any issues or problems. Ideally you include 
 ## Contributing
 If you're interested in advancing this, please use the usual workflow of forking and creating a pullrequest.
 
-
+## Similar projects
+Chris thought this project is not maintained anymore and did want to try a different approach. If this doesn't work for you maybe give his project a try:
+https://github.com/ChrisRomp/hamclock-docker
 ## Changelog
 ### v0.01
 Customize Hamclock configuration via config file
