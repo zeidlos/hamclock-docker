@@ -46,7 +46,7 @@ As of now, i don't have a raspbery Pi. WB0OEW gave me the feedback, that the `do
 3. Copy the `config_example.env` to `config.env` and edit to your liking
 4. Build the Docker image for the Dockerfile with this commad
     ``` cmd
-    docker build -t hamclock:latest
+    docker build -t hamclock:latest .
     ```
 5. Run the container with this command
     ``` cmd
